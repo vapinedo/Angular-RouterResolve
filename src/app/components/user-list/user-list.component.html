@@ -1,0 +1,5 @@
+<div *ngFor="let user of userList" class="alert alert-info">
+    <h4 class="text-muted">{{user.name}}</h4>
+    <p>{{user.email}}</p>
+    <button [routerLink]="['/user', user.id]" class="btn btn-outline-primary btn-sm">See Details</button>
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="user$ | async as user; else loading" class="alert alert-info">
+    <h4 class="text-muted">{{user.name}}</h4>
+    <p>{{user.email}}</p>
+    <button routerLink="/user-list" class="btn btn-outline-danger btn-sm">Go Back</button>
+</div>
+
+<ng-template #loading>
+    <p>Loading...</p>
+</ng-template>
